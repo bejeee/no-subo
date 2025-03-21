@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Imagen con Sonido</title>
+    <style>
+        /* Estilos opcionales para centrar la imagen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #imagen-sonido {
+            cursor: pointer;
+            width: 300px; /* Ajusta el tamaño según necesites */
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen que activará el sonido -->
+    <img id="imagen-sonido" src="no.jpg" alt="Haz clic para reproducir sonido">
+
+    <!-- Audio oculto -->
+    <audio id="audio" src="oye.mp3"></audio>
+
+    <script>
+        // JavaScript para reproducir el sonido al hacer clic
+        const imagen = document.getElementById('imagen-sonido');
+        const audio = document.getElementById('audio');
+
+        imagen.addEventListener('click', () => {
+            audio.play(); // Reproduce el sonido
+        });
+    </script>
+</body>
+</html>
